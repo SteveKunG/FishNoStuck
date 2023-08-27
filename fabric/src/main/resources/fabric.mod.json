@@ -1,0 +1,36 @@
+{
+    "schemaVersion": 1,
+    "id": "fishnostuck",
+    "version": "${version}",
+    "name": "Fish No Stuck",
+    "description": "A small mod that fixes fish stop moving entirely (MC-182763)",
+    "authors": [
+        "SteveKunG"
+    ],
+    "icon": "logo.png",
+    "contact": {
+        "homepage": "https://modrinth.com/mod/fish-no-stuck",
+        "sources": "https://github.com/SteveKunG/FishNoStuck",
+        "issues": "https://github.com/SteveKunG/FishNoStuck/issues"
+    },
+    "license": "MIT",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.stevekung.fishnostuck.FishNoStuck::init"
+        ]
+    },
+    "mixins": [
+        "mixins.fishnostuck.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.14.22"
+    },
+    "custom": {
+        "modmenu": {
+            "links": {
+                "modmenu.discord": "https://discord.gg/4bAj4mkGag"
+            }
+        }
+    }
+}

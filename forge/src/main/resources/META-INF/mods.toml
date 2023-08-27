@@ -1,0 +1,13 @@
+modLoader = "javafml"
+loaderVersion = "[37,)"
+license = "MIT"
+issueTrackerURL = "https://github.com/SteveKunG/FishNoStuck/issues"
+
+[[mods]]
+modId = "fishnostuck"
+version = "${version}"
+displayName = "Fish No Stuck"
+description = "A small mod that fixes fish stop moving entirely (MC-182763)"
+displayURL = "https://modrinth.com/mod/fish-no-stuck"
+logoFile = "logo.png"
+authors = "SteveKunG"
