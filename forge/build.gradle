@@ -95,7 +95,7 @@ curseforge {
         addGameVersion "1.20.1"
 
         mainArtifact(remapJar.archiveFile) {
-            it.displayName = "[Forge ${project.mc_version}] FishNoStuck v${mod_version}"
+            it.displayName = "[Forge ${supported_version}] FishNoStuck v${mod_version}"
         }
         afterEvaluate {
             uploadTask.dependsOn(remapJar)
@@ -113,7 +113,7 @@ modrinth {
     projectId = "fish-no-stuck"
     changelog = rootProject.file("CHANGE_LOG.md").text
     syncBodyFrom = rootProject.file("README.md").text
-    versionName = "[Forge ${project.mc_version}] FishNoStuck v${mod_version}"
+    versionName = "[Forge ${supported_version}] FishNoStuck v${mod_version}"
     versionNumber = project.mod_version + "-forge"
     versionType = "release"
     uploadFile = remapJar
