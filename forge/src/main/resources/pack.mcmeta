@@ -1,8 +1,6 @@
 {
   "pack": {
-    "pack_format": 7,
-    "description": "Pack for FishNoStuck Mod",
-    "forge:resource_pack_format": 7,
-    "forge:data_pack_format": 7
+    "pack_format": 8,
+    "description": "FishNoStuck resources"
   }
 }
