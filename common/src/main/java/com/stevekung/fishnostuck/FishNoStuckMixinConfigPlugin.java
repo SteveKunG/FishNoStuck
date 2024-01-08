@@ -10,6 +10,8 @@ import net.fabricmc.loader.api.FabricLoader;
 
 public class FishNoStuckMixinConfigPlugin implements IMixinConfigPlugin
 {
+    private static final boolean DEV = FabricLoader.getInstance().isDevelopmentEnvironment();
+
     @Override
     public void onLoad(String mixinPackage)
     {}
@@ -25,7 +27,7 @@ public class FishNoStuckMixinConfigPlugin implements IMixinConfigPlugin
     {
         if (mixinClassName.contains("debug"))
         {
-            return FabricLoader.getInstance().isDevelopmentEnvironment();
+            return DEV;
         }
         return true;
     }
@@ -37,7 +39,11 @@ public class FishNoStuckMixinConfigPlugin implements IMixinConfigPlugin
     @Override
     public List<String> getMixins()
     {
-        return List.of("debug.MixinAbstractSchoolingFish", "debug.accessor.AbstractSchoolingFishAccessor");
+        if (DEV)
+        {
+            return List.of("debug.MixinAbstractSchoolingFish", "debug.accessor.AbstractSchoolingFishAccessor");
+        }
+        return null;
     }
 
     @Override
