@@ -29,7 +29,11 @@ public class MixinAbstractSchoolingFish extends WaterAnimal
     {
         if (!((EntityAccessor)this).fishnostuck$level().isClientSide() && this.isDeadOrDying() && ((AbstractSchoolingFish)(Object)this).isFollower())
         {
-            ((AbstractSchoolingFishAccessor)this.leader).fishnostuck$removeFollower();
+            // Check leader is not null again because the leader might be inside an unloaded chunk
+            if (this.leader != null)
+            {
+                ((AbstractSchoolingFishAccessor) this.leader).fishnostuck$removeFollower();
+            }
         }
         super.remove(reason);
     }
