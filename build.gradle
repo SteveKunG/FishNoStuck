@@ -77,3 +77,9 @@ tasks.register("curseforgeModrinthForge") {
     dependsOn ":forge:modrinth"
     dependsOn ":forge:curseforge"
 }
+
+tasks.register("curseforgeModrinthNeoForge") {
+    group "publishing"
+    dependsOn ":neoforge:modrinth"
+    dependsOn ":neoforge:curseforge"
+}
