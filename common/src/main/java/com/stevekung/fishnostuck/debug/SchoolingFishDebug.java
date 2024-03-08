@@ -2,7 +2,7 @@ package com.stevekung.fishnostuck.debug;
 
 import com.stevekung.fishnostuck.mixin.debug.accessor.AbstractSchoolingFishAccessor;
 import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.animal.AbstractSchoolingFish;
 
 public class SchoolingFishDebug
@@ -16,7 +16,7 @@ public class SchoolingFishDebug
             return;
         }
 
-        if (!fish.level.isClientSide())
+        if (!fish.level().isClientSide())
         {
             var text = "";
 
@@ -42,7 +42,7 @@ public class SchoolingFishDebug
             }
 
             fish.setCustomNameVisible(true);
-            fish.setCustomName(new TextComponent(text));
+            fish.setCustomName(Component.literal(text));
         }
     }
 

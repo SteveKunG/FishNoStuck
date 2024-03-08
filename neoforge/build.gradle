@@ -1,13 +1,9 @@
 architectury {
     platformSetupLoomIde()
-    forge()
+    neoForge()
 }
 
 loom {
-    forge {
-        mixinConfig "mixins.fishnostuck.json"
-    }
-
     runs {
         client {
             property "mixin.debug.export", "true"
@@ -21,14 +17,18 @@ configurations {
     shadowCommon
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
-    developmentForge.extendsFrom common
+    developmentNeoForge.extendsFrom common
+}
+
+repositories {
+    maven { url "https://maven.neoforged.net/releases/" }
 }
 
 dependencies {
-    forge "net.minecraftforge:forge:${mc_version}-${forge_version}"
+    neoForge "net.neoforged:neoforge:${neoforge_version}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive false }
+    shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive false }
 }
 
 processResources {
@@ -52,7 +52,7 @@ shadowJar {
 remapJar {
     inputFile.set shadowJar.archiveFile
     dependsOn shadowJar
-    archiveClassifier = "forge"
+    archiveClassifier = "neoforge"
     archiveVersion = "v${mod_version}"
     archiveBaseName = fileName
     excludes = ["**/debug/"]
@@ -85,12 +85,12 @@ curseforge {
         changelog = rootProject.file("CHANGE_LOG.md")
         changelogType = "markdown"
         releaseType = "release"
-        addGameVersion "Forge"
+        addGameVersion "NeoForge"
         addGameVersion "Java 17"
         addGameVersion "1.20.4"
 
         mainArtifact(remapJar.archiveFile) {
-            it.displayName = "[Forge ${supported_version}] FishNoStuck v${mod_version}"
+            it.displayName = "[NeoForge ${supported_version}] FishNoStuck v${mod_version}"
         }
         afterEvaluate {
             uploadTask.dependsOn(remapJar)
@@ -108,10 +108,10 @@ modrinth {
     projectId = "fish-no-stuck"
     changelog = rootProject.file("CHANGE_LOG.md").text
     syncBodyFrom = rootProject.file("README.md").text
-    versionName = "[Forge ${supported_version}] FishNoStuck v${mod_version}"
-    versionNumber = project.mod_version + "-forge"
+    versionName = "[NeoForge ${supported_version}] FishNoStuck v${mod_version}"
+    versionNumber = project.mod_version + "-neoforge"
     versionType = "release"
     uploadFile = remapJar
     gameVersions = ["1.20.4"]
-    loaders = ["forge"]
+    loaders = ["neoforge"]
 }

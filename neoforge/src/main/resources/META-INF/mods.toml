@@ -1,7 +1,10 @@
 modLoader = "javafml"
-loaderVersion = "[49,)"
+loaderVersion = "[2,)"
 license = "MIT"
 issueTrackerURL = "https://github.com/SteveKunG/FishNoStuck/issues"
+
+[[mixins]]
+config = "mixins.fishnostuck.json"
 
 [[mods]]
 modId = "fishnostuck"

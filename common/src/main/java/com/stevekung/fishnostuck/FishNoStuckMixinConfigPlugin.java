@@ -6,11 +6,10 @@ import java.util.Set;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
-import net.fabricmc.loader.api.FabricLoader;
 
 public class FishNoStuckMixinConfigPlugin implements IMixinConfigPlugin
 {
-    private static final boolean DEV = FabricLoader.getInstance().isDevelopmentEnvironment();
+    private static final boolean DEV = Platform.isDev();
 
     @Override
     public void onLoad(String mixinPackage)

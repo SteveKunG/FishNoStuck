@@ -6,7 +6,6 @@
     "compatibilityLevel": "JAVA_17",
     "mixins": [
         "accessor.AbstractSchoolingFishAccessor",
-        "accessor.EntityAccessor",
         
         "MixinAbstractFish",
         "MixinAbstractFish$MixinFishSwimGoal",
