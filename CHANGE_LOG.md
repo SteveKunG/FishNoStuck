@@ -1,3 +1,2 @@
-* Mark 1.20.2 compatible
-* Update mod icon
-* Add Performance section and Grammar fix for Read Me
+* Bump to 1.0.2
+* Fix an edge case for the leader is null in some circumstances before removing a follower from the leader
