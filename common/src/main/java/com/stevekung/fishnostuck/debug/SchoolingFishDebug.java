@@ -16,7 +16,7 @@ public class SchoolingFishDebug
             return;
         }
 
-        if (!fish.level.isClientSide())
+        if (!fish.level().isClientSide())
         {
             var text = "";
 
