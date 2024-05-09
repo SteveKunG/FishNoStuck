@@ -24,7 +24,7 @@
         "mixins.fish_no_stuck.json"
     ],
     "depends": {
-        "minecraft": "1.20.1",
+        "minecraft": "1.20.4",
         "fabricloader": ">=0.15"
     },
     "custom": {
