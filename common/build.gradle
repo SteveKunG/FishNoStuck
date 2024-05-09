@@ -1,13 +1,1 @@
-architectury {
-    common(project.enabled_platforms.split(","))
-}
-
-loom {
-    mixin {
-        defaultRefmapName = "mixins.fishnostuck.refmap.json"
-    }
-}
-
-dependencies {
-    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
-}
+apply from: "https://raw.githubusercontent.com/SteveKunG/GradleScripts/main/architectury/common.gradle"
