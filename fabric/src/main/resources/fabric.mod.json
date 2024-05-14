@@ -21,7 +21,7 @@
         ]
     },
     "mixins": [
-        "mixins.fish_no_stuck.json"
+        "mixins.fishnostuck.json"
     ],
     "depends": {
         "minecraft": "1.18.2",
