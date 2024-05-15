@@ -1,2 +1,1 @@
-* Bump to 1.0.2
-* Fix an edge case for the leader is null in some circumstances before removing a follower from the leader
+* Mod no longer supports multiple versions at the same time, this will cause a problem with mapping issues.
