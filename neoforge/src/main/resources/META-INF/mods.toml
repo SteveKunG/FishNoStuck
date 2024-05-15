@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[2,)"
 license = "MIT"
 issueTrackerURL = "https://github.com/SteveKunG/FishNoStuck/issues"
 
@@ -11,3 +11,13 @@ description = "A small mod that fixes fish stop moving entirely (MC-182763)"
 displayURL = "https://modrinth.com/mod/fish-no-stuck"
 logoFile = "logo.png"
 authors = "SteveKunG"
+
+[[mixins]]
+config = "mixins.fishnostuck.json"
+
+[[dependencies.fishnostuck]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.20.4]"
+ordering = "NONE"
+side = "BOTH"

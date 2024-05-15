@@ -11,3 +11,10 @@ description = "A small mod that fixes fish stop moving entirely (MC-182763)"
 displayURL = "https://modrinth.com/mod/fish-no-stuck"
 logoFile = "logo.png"
 authors = "SteveKunG"
+
+[[dependencies.fishnostuck]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.4]"
+ordering = "NONE"
+side = "BOTH"

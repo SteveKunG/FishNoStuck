@@ -1,4 +1,4 @@
-package com.stevekung.fishnostuck.forge;
+package com.stevekung.fishnostuck.neoforge;
 
 import net.neoforged.fml.loading.FMLEnvironment;
 
