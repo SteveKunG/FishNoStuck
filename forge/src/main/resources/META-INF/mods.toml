@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[2,)"
+loaderVersion = "[36,)"
 license = "MIT"
 issueTrackerURL = "https://github.com/SteveKunG/FishNoStuck/issues"
 
@@ -17,7 +17,7 @@ config = "mixins.fishnostuck.json"
 
 [[dependencies.fishnostuck]]
 modId = "minecraft"
-type = "required"
-versionRange = "[1.21.6,)"
+mandatory = true
+versionRange = "[1.16.5]"
 ordering = "NONE"
 side = "BOTH"

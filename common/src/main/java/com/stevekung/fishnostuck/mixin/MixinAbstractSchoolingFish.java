@@ -6,7 +6,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import com.stevekung.fishnostuck.mixin.accessor.AbstractSchoolingFishAccessor;
 import com.stevekung.fishnostuck.mixin.accessor.EntityAccessor;
 
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.animal.AbstractSchoolingFish;
 import net.minecraft.world.entity.animal.WaterAnimal;
 
@@ -25,7 +24,7 @@ public class MixinAbstractSchoolingFish extends WaterAnimal
      * Decreased {@code schoolSize} from {@code leader} if this fish (follower) is getting killed.
      */
     @Override
-    public void remove(Entity.RemovalReason reason)
+    public void remove()
     {
         if (!((EntityAccessor)this).fishnostuck$level().isClientSide() && this.isDeadOrDying() && ((AbstractSchoolingFish)(Object)this).isFollower())
         {
@@ -35,6 +34,6 @@ public class MixinAbstractSchoolingFish extends WaterAnimal
                 ((AbstractSchoolingFishAccessor) this.leader).fishnostuck$removeFollower();
             }
         }
-        super.remove(reason);
+        super.remove();
     }
 }

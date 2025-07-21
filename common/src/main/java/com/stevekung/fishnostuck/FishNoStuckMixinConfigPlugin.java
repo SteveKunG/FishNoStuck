@@ -7,6 +7,8 @@ import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 
+import com.google.common.collect.Lists;
+
 public class FishNoStuckMixinConfigPlugin implements IMixinConfigPlugin
 {
     private static final boolean DEV = Platform.isDev();
@@ -40,7 +42,7 @@ public class FishNoStuckMixinConfigPlugin implements IMixinConfigPlugin
     {
         if (DEV)
         {
-            return List.of("debug.MixinAbstractSchoolingFish", "debug.accessor.AbstractSchoolingFishAccessor");
+            return Lists.newArrayList("debug.MixinAbstractSchoolingFish", "debug.accessor.AbstractSchoolingFishAccessor");
         }
         return null;
     }

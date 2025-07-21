@@ -1,9 +1,9 @@
 {
     "required": true,
-    "minVersion": "0.8.7",
+    "minVersion": "0.8.4",
     "package": "com.stevekung.fishnostuck.mixin",
     "plugin": "com.stevekung.fishnostuck.FishNoStuckMixinConfigPlugin",
-    "compatibilityLevel": "JAVA_21",
+    "compatibilityLevel": "JAVA_8",
     "mixins": [
         "accessor.AbstractSchoolingFishAccessor",
         "accessor.EntityAccessor",

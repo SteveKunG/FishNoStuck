@@ -18,6 +18,6 @@ public class MixinFollowFlockLeaderGoal
     @ModifyArg(method = "canUse", at = @At(value = "INVOKE", target = "java/util/stream/Stream.filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;", ordinal = 1, remap = false))
     private Predicate<AbstractSchoolingFish> fishnostuck$addHasFollowersCheck(Predicate<AbstractSchoolingFish> defaultValue)
     {
-        return defaultValue.and(Predicate.not(AbstractSchoolingFish::hasFollowers));
+        return defaultValue.and(fish -> !fish.hasFollowers());
     }
 }

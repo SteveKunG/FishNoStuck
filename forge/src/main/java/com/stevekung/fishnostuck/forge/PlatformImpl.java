@@ -1,6 +1,6 @@
-package com.stevekung.fishnostuck.neoforge;
+package com.stevekung.fishnostuck.forge;
 
-import net.neoforged.fml.loading.FMLEnvironment;
+import net.minecraftforge.fml.loading.FMLEnvironment;
 
 public class PlatformImpl
 {

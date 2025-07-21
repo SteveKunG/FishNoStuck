@@ -1,10 +1,11 @@
-package com.stevekung.fishnostuck.neoforge;
+package com.stevekung.fishnostuck.forge;
 
 import com.stevekung.fishnostuck.FishNoStuck;
-import net.neoforged.fml.common.Mod;
+
+import net.minecraftforge.fml.common.Mod;
 
 @Mod("fishnostuck")
-public class FishNoStuckNeoForge
+public class FishNoStuckForge
 {
     static
     {

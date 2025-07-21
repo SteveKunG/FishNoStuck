@@ -1,11 +1,11 @@
 package com.stevekung.fishnostuck;
 
-import org.slf4j.Logger;
-import com.mojang.logging.LogUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class FishNoStuck
 {
-    private static final Logger LOGGER = LogUtils.getLogger();
+    private static final Logger LOGGER = LogManager.getLogger();
 
     public static void init()
     {
