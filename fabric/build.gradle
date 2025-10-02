@@ -16,6 +16,10 @@ loom {
     }
 }
 
+dependencies {
+    include(implementation("com.moulberry:mixinconstraints:${mixin_constraints_version}"))
+}
+
 String fileName = "${archives_base_name}-mc${minecraft_version}"
 List<String> devExcludes = ["**/debug/"]
 

@@ -4,12 +4,7 @@
     "package": "com.stevekung.fishnostuck.mixin",
     "compatibilityLevel": "JAVA_21",
     "mixins": [
-        "accessor.AbstractSchoolingFishAccessor",
-
-        "MixinAbstractFish$MixinFishSwimGoal",
-        "MixinAbstractSchoolingFish",
-        "MixinFollowFlockLeaderGoal",
-        "MixinRandomStrollGoal"
+        "MixinAbstractFish"
     ],
     "injectors": {
         "defaultRequire": 1
