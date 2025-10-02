@@ -1,7 +1,7 @@
 apply from: "https://raw.githubusercontent.com/SteveKunG/GradleScripts/main/architectury/common.gradle"
 
 dependencies {
-    include(implementation("com.moulberry:mixinconstraints:${mixin_constraints_version}"))
+    implementation("com.moulberry:mixinconstraints:${mixin_constraints_version}")
 }
 
 tasks.shadowJar {
