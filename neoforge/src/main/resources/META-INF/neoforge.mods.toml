@@ -14,8 +14,6 @@ authors = "SteveKunG"
 
 [[mixins]]
 config = "mixins.fishnostuck.json"
-[[mixins]]
-config = "mixins.fishnostuck_reentrance_workaround.json"
 
 [[dependencies.fishnostuck]]
 modId = "minecraft"

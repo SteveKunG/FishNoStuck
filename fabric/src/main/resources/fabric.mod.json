@@ -21,8 +21,7 @@
         ]
     },
     "mixins": [
-        "mixins.fishnostuck.json",
-        "mixins.fishnostuck_reentrance_workaround.json"
+        "mixins.fishnostuck.json"
     ],
     "depends": {
         "fabricloader": ">=0.17.2",
