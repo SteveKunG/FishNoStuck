@@ -7,7 +7,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.moulberry.mixinconstraints.annotations.IfDevEnvironment;
-import com.stevekung.fishnostuck.debug.SchoolingFishDebug;
 import com.stevekung.fishnostuck.mixin.accessor.AbstractSchoolingFishAccessor;
 
 import net.minecraft.world.entity.Entity;
@@ -47,6 +46,6 @@ public class MixinAbstractSchoolingFish extends WaterAnimal
     @Inject(method = "tick", at = @At("TAIL"))
     private void fishnostuck$debugTick(CallbackInfo info)
     {
-        SchoolingFishDebug.tick(AbstractSchoolingFish.class.cast(this));
+        // SchoolingFishDebug.tick(AbstractSchoolingFish.class.cast(this));
     }
 }
