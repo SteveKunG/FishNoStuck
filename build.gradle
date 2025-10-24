@@ -7,3 +7,14 @@ plugins {
 }
 
 apply from: "https://raw.githubusercontent.com/SteveKunG/GradleScripts/main/architectury/main.gradle"
+
+allprojects {
+    apply plugin: "java"
+
+    tasks.withType(JavaCompile).tap {
+        configureEach {
+            options.encoding = "UTF-8"
+            options.release = 8
+        }
+    }
+}

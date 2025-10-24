@@ -2,14 +2,12 @@
     "required": true,
     "minVersion": "0.8.4",
     "package": "com.stevekung.fishnostuck.mixin",
-    "plugin": "com.stevekung.fishnostuck.FishNoStuckMixinConfigPlugin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
         "accessor.AbstractSchoolingFishAccessor",
-        "accessor.EntityAccessor",
-        
+
         "MixinAbstractFish",
-        "MixinAbstractFish$MixinFishSwimGoal",
+        "MixinFishSwimGoal",
         "MixinAbstractSchoolingFish",
         "MixinFollowFlockLeaderGoal",
         "MixinRandomStrollGoal"

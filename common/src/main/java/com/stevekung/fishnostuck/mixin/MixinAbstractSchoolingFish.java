@@ -5,10 +5,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import com.moulberry.mixinconstraints.annotations.IfDevEnvironment;
 import com.stevekung.fishnostuck.mixin.accessor.AbstractSchoolingFishAccessor;
-
 import net.minecraft.world.entity.animal.AbstractSchoolingFish;
 import net.minecraft.world.entity.animal.WaterAnimal;
 
@@ -30,7 +27,7 @@ public class MixinAbstractSchoolingFish extends WaterAnimal
     public void remove()
     {
         //noinspection ConstantValue
-        if (!this.level().isClientSide() && this.isDeadOrDying() && ((AbstractSchoolingFish) (Object) this).isFollower())
+        if (!this.level.isClientSide() && this.isDeadOrDying() && ((AbstractSchoolingFish) (Object) this).isFollower())
         {
             // Check leader is not null again because the leader might be inside an unloaded chunk
             if (this.leader != null)
@@ -41,7 +38,6 @@ public class MixinAbstractSchoolingFish extends WaterAnimal
         super.remove();
     }
 
-    @IfDevEnvironment
     @Inject(method = "tick", at = @At("TAIL"))
     private void fishnostuck$debugTick(CallbackInfo info)
     {
