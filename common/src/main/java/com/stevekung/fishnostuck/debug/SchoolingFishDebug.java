@@ -3,7 +3,7 @@ package com.stevekung.fishnostuck.debug;
 import com.stevekung.fishnostuck.mixin.accessor.AbstractSchoolingFishAccessor;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.animal.AbstractSchoolingFish;
+import net.minecraft.world.entity.animal.fish.AbstractSchoolingFish;
 
 public class SchoolingFishDebug
 {

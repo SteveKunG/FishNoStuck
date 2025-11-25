@@ -10,8 +10,8 @@ import com.moulberry.mixinconstraints.annotations.IfDevEnvironment;
 import com.stevekung.fishnostuck.mixin.accessor.AbstractSchoolingFishAccessor;
 
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.animal.AbstractSchoolingFish;
-import net.minecraft.world.entity.animal.WaterAnimal;
+import net.minecraft.world.entity.animal.fish.AbstractSchoolingFish;
+import net.minecraft.world.entity.animal.fish.WaterAnimal;
 
 @Mixin(AbstractSchoolingFish.class)
 public class MixinAbstractSchoolingFish extends WaterAnimal

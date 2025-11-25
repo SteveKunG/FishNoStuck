@@ -12,7 +12,7 @@ import com.stevekung.fishnostuck.RandomStrollGoalAccessor;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySelector;
-import net.minecraft.world.entity.animal.AbstractFish;
+import net.minecraft.world.entity.animal.fish.AbstractFish;
 
 @Mixin(AbstractFish.class)
 public class MixinAbstractFish

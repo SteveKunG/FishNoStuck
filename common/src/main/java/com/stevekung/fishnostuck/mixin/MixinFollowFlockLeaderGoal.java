@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 import net.minecraft.world.entity.ai.goal.FollowFlockLeaderGoal;
-import net.minecraft.world.entity.animal.AbstractSchoolingFish;
+import net.minecraft.world.entity.animal.fish.AbstractSchoolingFish;
 
 @Mixin(FollowFlockLeaderGoal.class)
 public class MixinFollowFlockLeaderGoal
