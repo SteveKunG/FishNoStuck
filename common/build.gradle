@@ -4,6 +4,12 @@ dependencies {
     implementation("com.moulberry:mixinconstraints:${mixin_constraints_version}")
 }
 
+loom {
+    mixin {
+        useLegacyMixinAp = true
+    }
+}
+
 tasks.shadowJar {
     zip64 = true
 }

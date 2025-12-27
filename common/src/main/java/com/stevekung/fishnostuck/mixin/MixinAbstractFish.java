@@ -26,7 +26,7 @@ public class MixinAbstractFish
         return EntitySelector.NO_CREATIVE_OR_SPECTATOR;
     }
 
-    @Mixin(targets = "net.minecraft.world.entity.animal.AbstractFish$FishSwimGoal")
+    @Mixin(targets = "net.minecraft.world.entity.animal.fish.AbstractFish$FishSwimGoal")
     static class MixinFishSwimGoal
     {
         /**
