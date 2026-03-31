@@ -1,15 +1,9 @@
-apply from: "https://raw.githubusercontent.com/SteveKunG/GradleScripts/main/architectury/common.gradle"
+apply from: "https://raw.githubusercontent.com/SteveKunG/GradleScripts/refs/heads/v2/architectury/common.gradle"
+
+tasks.named("shadowJar") {
+    enabled = false
+}
 
 dependencies {
     implementation("com.moulberry:mixinconstraints:${mixin_constraints_version}")
-}
-
-loom {
-    mixin {
-        useLegacyMixinAp = true
-    }
-}
-
-tasks.shadowJar {
-    zip64 = true
 }
