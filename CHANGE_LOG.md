@@ -1,1 +1,1 @@
-* Reduced icon file size
+* Update to 26.1.1
