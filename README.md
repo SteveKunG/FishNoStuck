@@ -1,7 +1,7 @@
 # FishNoStuck
 A small mod that fixes fish stop moving entirely [MC-182763](https://bugs.mojang.com/browse/MC-182763)
 
-Support with Minecraft 1.17.x-1.20.x for Fabric (Quilt maybe?)/Forge
+Support with Minecraft 1.17.x-26.1.x for Fabric/NeoForge
 
 Download on [Modrinth](https://modrinth.com/mod/fish-no-stuck)/[CurseForge](https://legacy.curseforge.com/minecraft/mc-mods/fish-no-stuck)
 
