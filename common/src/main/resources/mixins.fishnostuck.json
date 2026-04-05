@@ -9,6 +9,8 @@
         "MixinAbstractFish",
         "MixinAbstractFish$MixinFishSwimGoal",
         "MixinAbstractSchoolingFish",
+        "MixinDolphin",
+        "MixinDolphin$MixinPlayWithItemsGoal",
         "MixinFollowFlockLeaderGoal",
         "MixinRandomStrollGoal"
     ],
