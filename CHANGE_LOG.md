@@ -1,1 +1,1 @@
-* Initial release for 26.3
+* Bump recommended NeoForge version to 26.3.0.12-beta

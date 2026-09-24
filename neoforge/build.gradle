@@ -18,8 +18,6 @@ loom {
 
 dependencies {
     include(implementation("com.moulberry:mixinconstraints:${mixin_constraints_version}"))
-    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.5.5"))
-    implementation(include("io.github.llamalad7:mixinextras-neoforge:0.5.5"))
 }
 
 String fileName = "${archives_base_name}-mc${minecraft_version}"
